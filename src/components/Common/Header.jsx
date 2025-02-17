@@ -7,9 +7,7 @@ const Header = ({headerRef}) => {
     <header ref={headerRef}>
       <Image width={300} height={45} id='header-logo'  src="/images/logor.png" alt='logo'/>
       <div className='header-links'>
-        <Link href="/">home</Link>
         <Link href="/shop">shop</Link>
-        <Link href="/product/1">pdp</Link>
         <Link href="/archives">archives</Link>
         <Link href="/about">about</Link>
         <Link href="/contact">contact</Link>

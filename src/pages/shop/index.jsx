@@ -1,8 +1,11 @@
+import ShopWrapper from '@/components/shop/ShopWrapper'
 import React from 'react'
 
 const Shop = () => {
   return (
-    <div>Shop</div>
+    <>
+      <ShopWrapper />
+    </>
   )
 }
 

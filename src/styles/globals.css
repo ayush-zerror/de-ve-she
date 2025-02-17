@@ -1,3 +1,7 @@
+@font-face {
+  font-family: font1;
+  src: url(/fonts/07070ee11dc38bfbd060.woff);
+}
 * {
   margin: 0;
   padding: 0;
@@ -209,7 +213,7 @@ header {
   top: calc(100% - 130px);
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 9;
   display: flex;
   flex-direction: column;
   align-items: center;
