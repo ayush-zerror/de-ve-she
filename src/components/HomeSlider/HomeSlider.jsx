@@ -1,39 +1,82 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
 
 const HomeSlider = ({ homeRef }) => {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const handleWheel = (e) => {
+      if (scrollRef.current) {
+        scrollRef.current.scrollLeft += e.deltaY;
+      }
+    };
+
+    const slider = scrollRef.current;
+    if (slider) {
+      slider.addEventListener('wheel', handleWheel);
+    }
+
+    return () => {
+      if (slider) {
+        slider.removeEventListener('wheel', handleWheel);
+      }
+    };
+  }, []);
+
   return (
     <Link href='/' ref={homeRef} className='home-slider'>
-      <Image width={300} height={45} id='logo-h' src="/images/logor.png"  alt='image'/>
-      <div className='slide1'>
-        <Image fill src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2FBG.46b433ec.webp&w=3840&q=65" alt="image" />
-        <div className='slide1-container'>
-          <Image id='sl1-ig1' width={1000} height={500} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fcollina-2.d45d7ca7.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig2' width={1000} height={500} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fcollina-1.e43998a1.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig10' width={380} height={480} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Ffoglie.b613ec49.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig11' width={280} height={330} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fcervo.914af2db.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig12' width={60} height={300} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Falbero-1.b973206e.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig3' width={1000} height={500} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fcasa.e3d0a598.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig4' width={1000} height={500} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fstrappo.79055c14.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig5' width={350} height={600} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Ffiori.43dee3bf.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig6' width={420} height={470} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Ffiore-arancione.2f89f5af.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig7' width={200} height={200} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Ffiore-1.1d837b0c.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig8' width={450} height={450} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Ftasso.ef2552a9.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig9' width={400} height={400} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Ffiore-rosso-2.1056802a.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig13' width={370} height={500} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Ffiore-rosso-1.75581bb1.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig14' width={600} height={500} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Ffiore-con-geco.4c998c61.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig15' width={350} height={350} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Ffiore-blue.6be80143.webp&w=3840&q=65" alt='imgae' />
-          <Image id='sl1-ig16' width={1000} height={700} unoptimized src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Ffiori-blu.d220fe1b.webp&w=3840&q=65" alt='imgae' />
+      <Image width={300} height={45} id='logo-h' src="/images/logor.png" alt='image' />
+      <div className='horizontal-scroll' ref={scrollRef} style={{ overflow: 'hidden', whiteSpace: 'nowrap' }}>
+        <div className='slide1'>
+          <Image
+            fill
+            src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2FBG.46b433ec.webp&w=3840&q=65"
+            alt="image"
+          />
+          <div className='slide1-container'>
+            {[...Array(16)].map((_, i) => (
+              <Image
+                key={i}
+                id={`sl1-ig${i + 1}`}
+                width={1000}
+                height={1000}
+                src={`/images/img${i + 1}.avif`}
+                alt='image'
+              />
+            ))}
+          </div>
         </div>
-      </div>
-      <div className='slide2'>
-        <Image fill src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2FBG.3a61546b.webp&w=3840&q=65" alt="image" />
-        <div className="slide1-container">
+        <div className='slide2'>
+          <Image
+            width={1000}
+            height={1000}
+            src="https://dieselfarm.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2FBG.3a61546b.webp&w=3840&q=65"
+            alt="image"
+          />
+          <div className='slide1-container'>
+            <Image id='sl2-ig1' width={1000} height={1000} src="/images/im1.avif" alt='image' />
+            <Image id='sl2-ig2' width={1000} height={1000} src="/images/im2.avif" alt='image' />
+            <Image id='sl2-ig3' width={1000} height={1000} src="/images/im3.avif" alt='image' />
+            <Image id='sl2-ig4' width={1000} height={1000} src="/images/im4.avif" alt='image' />
+            <Image id='sl2-ig5' width={1000} height={1000} src="/images/im5.avif" alt='image' />
+            <Image id='sl2-ig6' width={1000} height={1000} src="/images/im6.avif" alt='image' />
+            <Image id='sl2-ig7' width={1000} height={1000} src="/images/im7.avif" alt='image' />
+            <Image id='sl2-ig8' width={1000} height={1000} src="/images/im8.avif" alt='image' />
+            <Image id='sl2-ig9' width={1000} height={1000} src="/images/im9.avif" alt='image' />
+            <Image id='sl2-ig10' width={1000} height={1000} src="/images/im10.avif" alt='image' />
+            <Image id='sl2-ig11' width={1000} height={1000} src="/images/im10.avif" alt='image' />
+            <Image id='sl2-ig12' width={1000} height={1000} src="/images/im10.avif" alt='image' />
+            <Image id='sl2-ig13' width={1000} height={1000} src="/images/im11.avif" alt='image' />
+            <Image id='sl2-ig14' width={1000} height={1000} src="/images/im12.avif" alt='image' />
+            <Image id='sl2-ig15' width={1000} height={1000} src="/images/im13.avif" alt='image' />
+            <Image id='sl2-ig16' width={1000} height={1000} src="/images/im14.avif" alt='image' />
+            <Image id='sl2-ig17' width={1000} height={1000} src="/images/im15.avif" alt='image' />
+          </div>
         </div>
       </div>
     </Link>
-  )
-}
+  );
+};
 
 export default HomeSlider;

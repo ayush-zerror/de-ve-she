@@ -11,7 +11,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
 /* Home slider start */
@@ -29,11 +29,16 @@ body {
   z-index: 2;
   overflow: hidden;
 }
+.horizontal-scroll{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
 #logo-h {
   position: absolute;
   left: 50%;
   top: 20px;
-  z-index: 2;
+  z-index: 99;
   transform: translateX(-50%);
   filter: grayscale(100%) brightness(0%) contrast(100%);
   object-fit: contain;
@@ -46,162 +51,516 @@ body {
   position: relative;
   z-index: 2;
 }
-.slide1 > img{
+.slide1 > img {
   position: absolute;
   top: 0;
   left: 0;
 }
-#sl1-ig1{
-  object-fit: contain;
+#sl1-ig1 {
   position: absolute;
-  width:"auto";
-  height:"auto";
-  bottom: 10%;
+  object-fit: cover;
+  width: 80%;
+  height: auto;
+  bottom: 5%;
   left: 0;
 }
-#sl1-ig2{
+#sl1-ig2 {
+  position: absolute;
   object-fit: cover;
-  position: absolute;
-  width:"auto";
-  height:"auto";
+  width: 80%;
+  height: auto;
   bottom: 0%;
-  right: -19%;
+  right: -20%;
 }
-#sl1-ig3{
-  object-fit: contain;
+#sl1-ig3 {
   position: absolute;
-  width:"auto";
-  height:"auto";
+  width: 58%;
+  height: auto;
+  object-fit: cover;
   top: 38%;
   left: 52%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
-#sl1-ig4{
-  object-fit: cover;
+#sl1-ig4 {
   height: 31%;
   position: absolute;
-  width:"auto";
-  height:"auto";
+  width: 120%;
+  height: auto;
+  object-fit: cover;
   left: 0%;
-  bottom: 0;
+  bottom: 0%;
 }
-#sl1-ig5{
-  object-fit: contain;
+#sl1-ig5 {
   position: absolute;
-  width:"auto";
-  height:"auto";
-  left: -17%;
+  width: 25%;
+  height: auto;
+  object-fit: cover;
+  left: -16%;
   bottom: -4%;
   z-index: 2;
+  transform-origin: bottom;
+  animation-name: img5;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+
 }
-#sl1-ig6{
-  object-fit: contain;
-  position: absolute;
-  width:"auto";
-  height:"auto";
-  left: 13%;
-  bottom: 3%;
+
+@keyframes img5 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
-#sl1-ig7{
-  object-fit: contain;
+#sl1-ig6 {
   position: absolute;
-  width:"auto";
-  height:"auto";
+  width: 25%;
+  height: auto;
+  left: 15%;
+  bottom: 8%;
+  transform-origin: bottom;
+  animation-name: img6;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+
+@keyframes img6 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+#sl1-ig7 {
+  position: absolute;
+  width: 18%;
+  height: auto;
+  object-fit: cover;
   left: 27%;
   bottom: 12%;
+  z-index: 3;
 }
-#sl1-ig8{
-  object-fit: cover;
+#sl1-ig8 {
   position: absolute;
-  width:"auto";
-  height:"auto";
+  width: 35%;
+  height: auto;
+  object-fit: cover;
   left: 12%;
   bottom: 16%;
+  display: none;
 }
-img{
-  background-color: transparent !important;
-}
-#sl1-ig9{
-  object-fit: contain;
+
+#sl1-ig9 {
   position: absolute;
-  width:"auto";
-  height:"auto";
-  width: auto;
-  left: 0%;
+  width: 25%;
+  height: auto;
+  object-fit: cover;
+  left: 2%;
   bottom: -19%;
+  z-index: 2;
+  transform-origin: bottom;
+  animation-name: img5;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+
 }
-#sl1-ig10{
-  object-fit: contain;
+
+
+#sl1-ig10 {
   position: absolute;
-  width:"auto";
-  height:"auto";
-  width: auto;
-  left: 67%;
+  width: 15%;
+  height: auto;
+  object-fit: cover;
+  right: 10%;
   top: 5%;
+  transform-origin: bottom;
+  animation-name: img6;
+  animation-duration: 9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
-#sl1-ig11{
-  object-fit: contain;
+
+
+#sl1-ig11 {
   position: absolute;
-  width:"auto";
-  height:"auto";
+  width: 20%;
+  height: auto;
   left: 68%;
   top: 28%;
 }
-#sl1-ig12{
-  object-fit: contain;
+#sl1-ig12 {
   position: absolute;
-  width:"auto";
-  height:"auto";
-  left: 74%;
+  width: 5%;
+  height: auto;
+  object-fit: cover;
+  left: 75%;
   top: 34%;
   z-index: 1;
+  transform-origin: bottom;
+  animation-name: img6;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
-#sl1-ig13{
-  object-fit: contain;
+#sl1-ig13 {
   position: absolute;
-  width:"auto";
-  height:"auto";
+  width: 30%;
+  height: auto;
+  object-fit: cover;
   right: -13%;
   top: 18%;
-  z-index: 2;
+  z-index:3;
+  transform-origin: bottom;
+  animation-name: img5;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
-#sl1-ig14{
-  object-fit: contain;
+#sl1-ig14 {
   position: absolute;
-  width:"auto";
-  height:"auto";
+  width: 35%;
+  height: auto;
+  object-fit: cover;
   right: -13%;
   bottom: -20%;
   z-index: 6;
+  transform-origin: bottom;
+  animation-name: img6;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
-#sl1-ig15{
-  object-fit: contain;
+#sl1-ig15 {
   position: absolute;
-  width:"auto";
-  height:"auto";
+  width: 25%;
+  height: auto;
+  object-fit: cover;
   left: -4%;
   top: 2%;
   z-index: 1;
+  transform-origin: bottom;
+  animation-name: img6;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
-#sl1-ig16{
-  object-fit: contain;
+#sl1-ig16 {
   position: absolute;
-  width:"auto";
-  height:"auto";
-  right: -50%;
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  right: -45%;
   top: -7%;
-  z-index: 1;
+  z-index: 99;
+  transform-origin: bottom;
+  animation-name: img5;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  z-index: 2;
 }
-.slide1-container{
+.slide1-container {
   position: relative;
   aspect-ratio: 1918 / 1080;
+  z-index: 2;
 }
 .slide2 {
-  flex-shrink: 0;
-  flex-grow: 1;
+  flex: 0 0 auto;
   height: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 2250 / 1080;
   position: relative;
+  z-index: 1;
+}
+.slide2> img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#sl2-ig1{
+  position: absolute;
+  width: 75%;
+  height: auto;
+  object-fit: cover;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+#sl2-ig2{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+#sl2-ig3{
+  position: absolute;
+  width: 35%;
+  height: auto;
+  object-fit: cover;
+  bottom: 27%;
+  left: 47%;
+  transform: translate(-50%,0);
+}
+
+#sl2-ig4{
+  position: absolute;
+  width: 12%;
+  height: auto;
+  object-fit: cover;
+  bottom: 35%;
+  right: 2%;
+  transform-origin: bottom;
+  animation-name: img5;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+#sl2-ig5{
+  position: absolute;
+  width: 12%;
+  height: auto;
+  object-fit: cover;
+  bottom: 30%;
+  right: 2%;
+  transform-origin: bottom;
+  animation-name: img7;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+@keyframes img7 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#sl2-ig6{
+  position: absolute;
+  width: 35%;
+  height: auto;
+  object-fit: cover;
+  bottom: 15%;
+  right: 5%;
+  transform-origin: bottom;
+  animation-name: img7;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+}
+
+#sl2-ig7 {
+  position: absolute;
+  width: 18%;
+  height: auto;
+  left: 10%;
+  bottom: 20%;
+}
+#sl2-ig8 {
+  position: absolute;
+  width: 20%;
+  height: auto;
+  left: 15%;
+  bottom:5%;
+  transform-origin: bottom;
+  animation-name: img6;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+}
+#sl2-ig9 {
+  position: absolute;
+  width: 16%;
+  height: auto;
+  left: 25%;
+  bottom:5%;
+  transform-origin: bottom;
+  animation-name: img6;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+}
+#sl2-ig10 {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  left: 47%;
+  bottom:30%;
+  transform-origin: bottom;
+  animation-name: img6;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+}
+
+#sl2-ig11 {
+  position: absolute;
+  width: 9%;
+  height: auto;
+  left: 37%;
+  bottom:15%;
+  transform-origin: bottom;
+  animation-name: img7;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+}
+
+#sl2-ig12 {
+  position: absolute;
+  width: 9%;
+  height: auto;
+  left: 55%;
+  bottom:25%;
+  transform-origin: bottom;
+  animation-name: img7;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+}
+
+#sl2-ig13 {
+  position: absolute;
+  width: 13%;
+  height: auto;
+  left: 45%;
+  bottom:20%;
+  transform-origin: bottom;
+  animation-name: img7;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+}
+
+#sl2-ig14 {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  right: 5%;
+  bottom:10%;
+}
+#sl2-ig15 {
+  position: absolute;
+  width: 8%;
+  height: auto;
+  right: 26%;
+  bottom:64%;
+}
+#sl2-ig16 {
+  position: absolute;
+  width: 5%;
+  height: auto;
+  right: 6%;
+  top: 15%;
+}
+
+#sl2-ig17 {
+  position: absolute;
+  width: 6%;
+  height: auto;
+  right: 5%;
+  top: 10%;
+  transform-origin: top;
+  animation-name: upDown;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* Home slider end */
@@ -1124,8 +1483,6 @@ button {
   padding-bottom: 40px;
   /* white-space: nowrap; */
 }
-
-
 
 .shop-card-w-full {
   width: 100%;
