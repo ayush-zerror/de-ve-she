@@ -1,8 +1,9 @@
+import ArchiveWrapper from '@/components/archives/ArchiveWrapper'
 import React from 'react'
 
 const Archives = () => {
   return (
-    <div>Archives</div>
+    <ArchiveWrapper />
   )
 }
 

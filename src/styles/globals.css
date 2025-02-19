@@ -13,7 +13,9 @@ body {
   height: 100%;
   background-color: #f7f7f7;
 }
-
+::-webkit-scrollbar{
+  display: none;
+}
 /* Home slider start */
 .home-wrapper {
   position: relative;
@@ -40,8 +42,11 @@ body {
   top: 20px;
   z-index: 99;
   transform: translateX(-50%);
-  filter: grayscale(100%) brightness(0%) contrast(100%);
-  object-fit: contain;
+  font-size: 30px;
+  font-family: font2;
+  text-transform: uppercase;
+  word-spacing: 2px;
+  color: #000000;
 }
 .slide1 {
   flex-shrink: 0;
@@ -81,6 +86,7 @@ body {
   left: 52%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  display: none;
 }
 #sl1-ig4 {
   height: 31%;
@@ -567,22 +573,25 @@ body {
 
 /* header start */
 
-header {
+#header-logo {
+  font-size: 30px;
+  font-family: font2;
+  text-transform: uppercase;
+  word-spacing: 2px;
   position: fixed;
-  top: calc(100% - 130px);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-top: 9px;
+  /* padding-bottom: 15px; */
   left: 50%;
   transform: translateX(-50%);
   z-index: 9;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  padding-top: 20px;
-}
-header img {
-  filter: grayscale(100%) brightness(0%) contrast(100%);
-  object-fit: contain;
+  top: calc(100vh - 150px);
+  text-decoration: none;
   opacity: 0;
+  color: #fff;
+  mix-blend-mode: difference;
 }
 .header-links {
   display: flex;
@@ -591,13 +600,23 @@ header img {
   height: 30px;
   background-color: #f7f7f7;
   padding: 0 30px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+  top: calc(100vh - 65px);
 }
-header a {
+.header-links  a{
+  color: #000;
   text-decoration: none;
-  color: black;
   text-transform: uppercase;
   font-size: 16px;
 }
+/* header a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+} */
 /* header end */
 
 /* product card details */

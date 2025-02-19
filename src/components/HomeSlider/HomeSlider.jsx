@@ -26,7 +26,7 @@ const HomeSlider = ({ homeRef }) => {
 
   return (
     <Link href='/' ref={homeRef} className='home-slider'>
-      <Image width={300} height={45} id='logo-h' src="/images/logor.png" alt='image' />
+      <h2 id='logo-h'>de ve she dreams</h2>
       <div className='horizontal-scroll' ref={scrollRef} style={{ overflow: 'hidden', whiteSpace: 'nowrap' }}>
         <div className='slide1'>
           <Image

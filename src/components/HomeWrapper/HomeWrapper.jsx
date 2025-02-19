@@ -1,27 +1,30 @@
 import React, { useEffect, useRef } from "react";
 import HomeSlider from "../HomeSlider/HomeSlider";
-import Header from "../Common/Header";
 import { useRouter } from "next/router";
 import gsap from "gsap";
+import HeaderLogo from "../Common/HeaderLogo";
+import HeaderNavigation from "../Common/HeaderNavigation";
 
 const HomeWrapper = ({ children }) => {
   const route = useRouter();
   const homeRef = useRef(null);
-  const headerRef = useRef(null);
+  // const headerRef = useRef(null);
+  const headerLogo = useRef(null);
+  const headerNav = useRef(null);
 
   // Set initial position based on localStorage (fixes direct jump issue)
   useEffect(() => {
     const previousRoute = localStorage.getItem("previousRoute");
     if (!previousRoute || previousRoute !== "/") {
-      gsap.set(homeRef.current, { top: "-92%" });
-      gsap.set(headerRef.current, { top: "8%" });
-      gsap.set(headerRef.current.querySelector("#header-logo"), { opacity: 1 });
+      gsap.set(homeRef.current, { top: "-100%" });
+      gsap.set(headerNav.current, { top: "80px" });
+      gsap.set(headerLogo.current, { opacity: 1, top: "0%" });
     } else {
       gsap.set(homeRef.current, { top: "0%" });
-      gsap.set(headerRef.current, { top: "calc(100% - 130px)" });
-      gsap.set(headerRef.current.querySelector("#header-logo"), { opacity: 0 });
+      gsap.set(headerNav.current, { top: "calc(100vh - 65px)" });
+      gsap.set(headerLogo.current, { opacity: 0, top: "calc(100vh - 130px)" });
     }
-  }, []); 
+  }, []);
 
   useEffect(() => {
     const previousRoute = localStorage.getItem("previousRoute");
@@ -38,22 +41,24 @@ const HomeWrapper = ({ children }) => {
     if (previousRoute === "/" && route.pathname !== "/") {
       var tl = gsap.timeline()
       tl
-      .to(homeRef.current, {
-        top: "-92%",
-        duration: 0.8,
-        ease: "power2.out",
-      })
-      .to(headerRef.current, {
-        top: "8%",
-        duration: 0.8,
-        ease: "power2.out",
-        delay:-0.2
-      },"a")
-      .to(headerRef.current.querySelector("#header-logo"), {
-        opacity: 1,
-        duration: 0.5,
-        ease: "power2.out",
-      },"a")
+        .to(homeRef.current, {
+          top: "-100%",
+          duration: 1,
+          ease: "power2.out",
+        })
+        .to(headerNav.current, {
+          top: "80px",
+          duration: 0.8,
+          ease: "power2.out",
+          delay: -0.4
+        }, "a")
+        .to(headerLogo.current, {
+          opacity: 1,
+          top: "0%",
+          duration: 0.8,
+          ease: "power2.out",
+          delay: -0.4
+        }, "a")
     }
 
 
@@ -61,28 +66,30 @@ const HomeWrapper = ({ children }) => {
     if (previousRoute !== "/" && route.pathname === "/") {
       var home = gsap.timeline();
       home
-      .to(headerRef.current.querySelector("#header-logo"), {
-        opacity:0,
-        duration: 0.3,
-        ease: "power2.out",
-      },"a")
-      .to(headerRef.current, {
-        top: "calc(100% - 130px)",
-        duration: 0.8,
-        ease: "power2.out",
-      },"a")
-      .to(homeRef.current, {
-        top: "0%",
-        duration: 0.8,
-        ease: "power2.out",
-      })
+        .to(headerLogo.current, {
+          opacity: 0,
+          top: "calc(100vh - 130px)",
+          duration: 0.8,
+          ease: "power2.out",
+        }, "a")
+        .to(headerNav.current, {
+          top: "calc(100vh - 65px)",
+          duration: 0.8,
+          ease: "power2.out",
+        }, "a")
+        .to(homeRef.current, {
+          top: "0%",
+          duration: .6,
+          ease: "power2.out",
+        })
     }
   }, [route.pathname]);
 
   return (
     <div className="home-wrapper">
       <HomeSlider homeRef={homeRef} />
-      <Header headerRef={headerRef} />
+      <HeaderLogo headerLogo={headerLogo} />
+      <HeaderNavigation headerNav={headerNav} />
       {children}
     </div>
   );

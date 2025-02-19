@@ -35,12 +35,11 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
-  margin-top: 8vh;
 }
-.shopSection1 img{
-    width: 100%;
-    height:100%;
-    object-fit: cover;
+.shopSection1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .shopSection2 {
@@ -353,32 +352,32 @@
   color: #fff;
 }
 
-.bigCardContainer{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+.bigCardContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.bigCard{
-    width: 38%;
-    padding: 1.5vw;
-    background-color: #fff;
+.bigCard {
+  width: 38%;
+  padding: 1.5vw;
+  background-color: #fff;
 }
-.bigCard video{
-    width: 100%;
-}
-
-.bigCard p{
-    font-family: font2;
-    font-size: 1.9vw;
-    text-transform: capitalize;
-    color: #7546ff;
-    margin-top: 1vw;
+.bigCard video {
+  width: 100%;
 }
 
-.shopSection5 .overlay5 >h2{
-    font-size: 16vw;
-    color: #fff;
+.bigCard p {
+  font-family: font2;
+  font-size: 1.9vw;
+  text-transform: capitalize;
+  color: #7546ff;
+  margin-top: 1vw;
+}
+
+.shopSection5 .overlay5 > h2 {
+  font-size: 16vw;
+  color: #fff;
 }
 
 .shopSection6 {
@@ -393,19 +392,19 @@
   gap: 40px;
 }
 
-.shopSection6 h2{
-    font-size: 7.5vw;
+.shopSection6 h2 {
+  font-size: 7.5vw;
 }
-.shopSection6 h2 span{
-    color: #7546ff;
-}
-
-.shopSection6 img{
-    width: 70%;
-    height: auto;
+.shopSection6 h2 span {
+  color: #7546ff;
 }
 
-.shopSection7{
+.shopSection6 img {
+  width: 70%;
+  height: auto;
+}
+
+.shopSection7 {
   width: 100%;
   height: 120vh;
   padding: 80px;
@@ -441,7 +440,7 @@
   font-weight: 800;
 }
 
-.shopSection7 > img{
+.shopSection7 > img {
   position: absolute;
   width: 14.5vw;
   height: auto;
@@ -450,36 +449,36 @@
   transform: rotate(-30deg);
 }
 
-.rightCardCont{
+.rightCardCont {
   width: 42%;
   position: absolute;
   top: 0;
   right: 0;
 }
-.cardLg{
+.cardLg {
   width: 50%;
   transform: rotate(20deg) translateX(55%) translateY(-20%);
   position: relative;
   z-index: 2;
 }
-.cardLg img{
+.cardLg img {
   width: 100%;
   height: auto;
 }
 
-.cardSm{
+.cardSm {
   position: absolute;
   width: 30%;
   bottom: 0;
   left: -5%;
   transform: rotate(-20deg);
 }
-.cardSm img{
+.cardSm img {
   width: 100%;
   height: auto;
 }
 
-.rightCardCont >img{
+.rightCardCont > img {
   position: absolute;
   bottom: -8%;
   left: 35%;
@@ -489,7 +488,7 @@
   z-index: 3;
 }
 
-.shopSection8{
+.shopSection8 {
   width: 100%;
   height: 120vh;
   position: relative;
@@ -498,23 +497,107 @@
   justify-content: space-between;
   padding: 80px;
   padding-top: 220px;
-  overflow: hidden;
 }
 
-.shopSection8 h2{
+.shopSection8 h2 {
   font-size: 4vw;
   text-align: center;
   letter-spacing: -1px;
 }
-.shopSection8 h2 span{
+.shopSection8 h2 span {
   color: #7546ff;
 }
 
-.shopSection8 > img{
+.shopSection8 > img {
   width: 14.5vw;
   height: auto;
   position: absolute;
-  bottom: -10%;
+  bottom: 0%;
   right: 0;
   transform: rotate(25deg);
+}
+
+.productListing {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  border-top: 1px solid black;
+
+}
+.leftProCon {
+  position: sticky;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  border-right: 1px solid black;
+}
+.leftProCon img {
+  width: 100%;
+  height: 100vh;
+}
+.overlayLeftp{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #F7F7F7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease .2s;
+}
+.overlayLeftp:hover{
+  background-color: transparent;
+}
+
+.overlayLeftp img {
+  width: 50%;
+  height: auto;
+}
+
+.rightProCon {
+  width: 50%;
+  background-color: blue;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productCard {
+  width: 50%;
+  height: 50vh;
+  background-color: yellow;
+  position: relative;
+  border-bottom: 1px solid black;
+}
+.productCard:nth-child(2n){
+  border-left: 1px solid black;
+}
+
+.productCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlayRightp{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #F7F7F7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease .2s;
+}
+
+.overlayRightp:hover{
+  background-color: transparent;
+}
+
+.overlayRightp img{
+  width: 50%;
+  height: auto;
 }
