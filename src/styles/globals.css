@@ -43,10 +43,11 @@ body {
   z-index: 99;
   transform: translateX(-50%);
   font-size: 30px;
-  font-family: font2;
   text-transform: uppercase;
   word-spacing: 2px;
   color: #000000;
+  font-family: font2;
+  font-weight: 600;
 }
 .slide1 {
   flex-shrink: 0;
