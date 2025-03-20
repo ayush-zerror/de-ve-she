@@ -33,6 +33,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
 }
 .overlayA1{
     position: absolute;
@@ -75,7 +76,7 @@
 .archiveSection2{
   width: 100%;
   height: 100vh;
-  background-color: black;
+  background-color: #F7F7F7;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,9 +86,11 @@
 .archiveSection2 h3{
   width: 70%;
   font-size: 45px;
-  font-family: font3;
+  font-family: font2;
+  text-transform: uppercase;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1;
+  color: #000000;
 }
 
 .archiveSection2 h3 span{
@@ -96,7 +99,7 @@
 
 .archiveSection3{
     position: relative;
-    height: 100vh;
+    height: 101vh;
     width: 100%;
     overflow: hidden;
     background-color: black;
@@ -113,6 +116,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 0;
+    background-color: black;
   }
   .overlay3a{
     position: absolute;
@@ -158,22 +162,22 @@
   .archiveSection3 .elem1{
     z-index: 1;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    background-image: url(https://rahasyafragrances.com/cdn/shop/files/Chapter_One_Render_w_bottle_High-Camera.png?v=1728383207&width=3840);
+    background-image: url("/archive/slide1.JPG");
   }
   .archiveSection3 .elem2{
     z-index: 2;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-    background-image: url(https://rahasyafragrances.com/cdn/shop/files/Cutting_Rain_with_Bottle_Render_Med_Res_cf962c48-7647-4051-bc4d-134e68c8c476.png?v=1728689321&width=3840);
+    background-image: url("/archive/slide2.JPG");
   
   }
   .archiveSection3 .elem3{
     z-index: 3;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-    background-image: url(https://rahasyafragrances.com/cdn/shop/files/Oud_Mangi_bottle_and_block.png?v=1728396178&width=3840);
+    background-image: url("/archive/slide3.JPG");
   
   }
   .archiveSection3 .elem4{
     z-index: 4;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-    background-image: url(https://rahasyafragrances.com/cdn/shop/files/Love_Marriage_w_Bottle_2_Closer_ef6e3d93-46d7-4d11-8e97-da86461c3732.png?v=1728386847&width=3840);
+    background-image: url("/archive/slide1.JPG");
   }

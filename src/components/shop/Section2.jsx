@@ -15,16 +15,16 @@ const Section2 = () => {
         <h2>a difference!</h2>
         <div className={styles.shopSection2TopBtm}>
           <div className={styles.leftCard}>
-            <Image width={1000} height={1000} src="https://emmpo.com/assets/4fbb40b07af6f682db96.png" alt='image'/>
+            <Image width={1000} height={1000} src="/shop/Peach_crochet_shirt.webp" alt='image' />
           </div>
           <div className={styles.centerCard}>
             <div className={styles.imgCont}>
-              <Image width={1000} height={1000} src="https://emmpo.com/assets/8ef7901dbe5edf86b8b0.png"  alt='image'/>
+              <Image width={1000} height={1000} src="/shop/Silver metallic crochet bib.jpeg" alt='image' />
             </div>
             <p>You find the careers that you would most likely Enjoy and are good at.</p>
           </div>
           <div className={styles.rightCard}>
-            <Image width={1000} height={1000} src="https://emmpo.com/assets/601577b96b18bd5ad582.png" alt='image'/>
+            <Image width={1000} height={1000} src="/shop/Gold crochet bib.JPG" alt='image' />
           </div>
         </div>
       </div>
@@ -34,8 +34,18 @@ const Section2 = () => {
           Sustainability, <br />
           and Tech.</h3>
         <h4>[Take the Quiz]</h4>
-        <Image className={styles.strip1} width={1000} height={1000} src="https://emmpo.com/assets/dd22341dae808d910395.png" alt='image'/>
-        <Image className={styles.strip2} width={1000} height={1000} src="https://emmpo.com/assets/68dbb3529ef7e3ddd827.png" alt='image'/>
+        <div className={styles.strip1}>
+          <Image width={1000} height={1000} src="/shop/dress1.jpeg" alt='image' />
+          <Image width={1000} height={1000} src="/shop/dress4.jpeg" alt='image' />
+          <Image width={1000} height={1000} src="/shop/dress2.jpeg" alt='image' />
+          <Image width={1000} height={1000} src="/shop/dress3.jpeg" alt='image' />
+        </div>
+        <div className={styles.strip2}>
+          <Image width={1000} height={1000} src="/shop/dress5.JPG" alt='image' />
+          <Image width={1000} height={1000} src="/shop/dress6.jpeg" alt='image' />
+          <Image width={1000} height={1000} src="/shop/dress7.jpeg" alt='image' />
+          <Image width={1000} height={1000} src="/shop/dress8.JPG" alt='image' />
+        </div>
       </div>
     </div>
   )

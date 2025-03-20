@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Section5 = () => {
     return (
         <div className={styles.shopSection5}>
-            <Image width={1000} height={1000} src="/images/ig5.png" alt='ig5-banner'/>
+            <Image width={1000} height={1000} src="/about/about-banner1.jpeg" alt='ig5-banner'/>
             <div className={styles.overlay5}>
                 <div>
                     <h2>The person</h2>

@@ -12,7 +12,7 @@ const Section3 = () => {
             scrollTrigger: {
                 trigger: "#archiveSection3",
                 scroller: "body",
-                start: "top 0%",
+                start: "top -1%",
                 end: "top -350%",
                 pin: true,
                 // markers: true,

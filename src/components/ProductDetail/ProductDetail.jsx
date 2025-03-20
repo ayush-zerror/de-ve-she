@@ -7,36 +7,35 @@ gsap.registerPlugin(ScrollTrigger)
 
 const ProductDetail = () => {
   const images = [
-    "https://cdn.shopify.com/s/files/1/0030/2946/7203/files/Drey-black_1.jpg?v=1710956335&width=420&height=630&crop=center",
-    "https://cdn.shopify.com/s/files/1/0030/2946/7203/files/Drey-black_1.jpg?v=1710956335&width=420&height=630&crop=center",
-    "https://cdn.shopify.com/s/files/1/0030/2946/7203/files/Drey-black_1.jpg?v=1710956335&width=420&height=630&crop=center",
-    "https://cdn.shopify.com/s/files/1/0030/2946/7203/files/Drey-black_1.jpg?v=1710956335&width=420&height=630&crop=center",
+    "/product/Emerald Kaftan top (2).jpeg",
+    "/about/about-banner.webp",
+    "/shop/shop-banner1.webp",
   ]
   const ShopCardDetails = [
     {
       id: 1,
-      image1: "https://cdn.shopify.com/s/files/1/0030/2946/7203/files/Zakary-scotch_1dark.jpg?v=1713365490&width=420&height=630&crop=center",
+      image1: "/product/Ombré crochet patch dress- Brown (1).JPG",
       BrandName: "BrandName",
       ProductName: "ProductName",
       price: "1200",
     },
     {
       id: 2,
-      image1: "https://cdn.shopify.com/s/files/1/0030/2946/7203/files/Edra-black_1.jpg?v=1713894113&width=420&height=630&crop=center",
+      image1: "/product/Emerald Kaftan top (2).jpeg",
       BrandName: "BrandName",
       ProductName: "ProductName",
       price: "1200",
     },
     {
       id: 3,
-      image1: "https://cdn.shopify.com/s/files/1/0030/2946/7203/files/Kerri-camel_3.jpg?v=1711721968&width=420&height=630&crop=center",
+      image1: "/product/Ombré pink slit top (1).JPG",
       BrandName: "BrandName",
       ProductName: "ProductName",
       price: "1200",
     },
     {
       id: 4,
-      image1: "https://cdn.shopify.com/s/files/1/0030/2946/7203/files/Drey-black_1.jpg?v=1710956335&width=420&height=630&crop=center",
+      image1: "/product/Ombré yellow wrap shirt.jpeg",
       BrandName: "BrandName",
       ProductName: "ProductName",
       price: "1200",

@@ -18,7 +18,12 @@ const Section7 = () => {
                     that the key to supporting you is <span>helping you uncover</span> your strengths and passions.
                 </p>
             </div>
-            <Image width={1000} height={1000} src="https://emmpo.com/assets/99d8d9d6f871569ac6a2.png" alt='card' />
+            <div className={styles.strip7}>
+            <Image width={1000} height={1000} src="/about/dress1.jpg" alt='card' />
+            <Image width={1000} height={1000} src="/about/dress2.jpg" alt='card' />
+            <Image width={1000} height={1000} src="/about/dress3.jpg" alt='card' />
+            <Image width={1000} height={1000} src="/about/dress4.jpg" alt='card' />
+            </div>
             <div className={styles.rightCardCont}>
                 <div className={styles.cardLg}>
                     <Image width={1000} height={1000} src="https://emmpo.com/assets/0ef1120be377127bff85.png" alt='card' />

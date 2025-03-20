@@ -5,11 +5,11 @@ import Image from 'next/image'
 const Section3 = () => {
     return (
         <div className={styles.shopSection3}>
-            <Image width={1000} height={1000} src="https://emmpo.com/assets/e9b2fd43c75746583eb5.png" alt='image'/>
+            <Image width={1000} height={1000} src="/shop/shop-banner1.webp" alt='image'/>
             <div className={styles.overlay3}>
                 <div>
-                    <h2>Discover your</h2>
-                    <h2>future!</h2>
+                    <h2>Discover New</h2>
+                    <h2>Collection!</h2>
                 </div>
                 <div className={styles.Section33Btm}>
                     <p>Find which careers match <br />
