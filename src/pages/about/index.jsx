@@ -1,4 +1,5 @@
 import PathSection from '@/components/about/PathSection'
+import Footer from '@/components/footer/Footer'
 import Section5 from '@/components/shop/Section5'
 import Section6 from '@/components/shop/Section6'
 import Section7 from '@/components/shop/Section7'
@@ -13,6 +14,7 @@ const About = () => {
     <Section7/>
     <Section8/>
     <PathSection/>
+    <Footer/>
     </>
   )
 }

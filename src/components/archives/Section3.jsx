@@ -2,17 +2,18 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import React, { useEffect } from 'react'
 import styles from './archive.module.css'
+import { useGSAP } from '@gsap/react'
 gsap.registerPlugin(ScrollTrigger)
 
 
 const Section3 = () => {
 
-    useEffect(() => {
+    useGSAP(() => {
         var tl = gsap.timeline({
             scrollTrigger: {
                 trigger: "#archiveSection3",
                 scroller: "body",
-                start: "top -1%",
+                start: "top -0%",
                 end: "top -350%",
                 pin: true,
                 // markers: true,

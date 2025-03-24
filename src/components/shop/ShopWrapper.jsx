@@ -9,6 +9,7 @@ import Section4 from './Section4'
 // import Section7 from './Section7'
 // import Section8 from './Section8'
 import ProductListing from './ProductListing'
+import Footer from '../footer/Footer'
 
 const ShopWrapper = () => {
   return (
@@ -18,6 +19,7 @@ const ShopWrapper = () => {
         <Section2/>
         <ProductListing/>
         <Section4/>
+        <Footer />
     </div>
   )
 }

@@ -620,7 +620,6 @@
 
 .rightProCon {
   width: 50%;
-  background-color: blue;
   display: flex;
   flex-wrap: wrap;
 }
@@ -628,7 +627,6 @@
 .productCard {
   width: 50%;
   height: 50vh;
-  background-color: yellow;
   position: relative;
   border-bottom: 1px solid black;
 }

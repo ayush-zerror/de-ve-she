@@ -1,8 +1,15 @@
+import Section1 from '@/components/contact/Section1'
+import Footer from '@/components/footer/Footer'
 import React from 'react'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+      <Section1 />
+      <Footer/>
+
+
+    </>
   )
 }
 
