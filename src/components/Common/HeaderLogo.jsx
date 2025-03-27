@@ -7,4 +7,4 @@ const HeaderLogo = ({headerLogo}) => {
   )
 }
 
-export default HeaderLogo
+export default HeaderLogo;
