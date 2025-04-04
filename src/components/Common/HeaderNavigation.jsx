@@ -8,6 +8,7 @@ const HeaderNavigation = ({headerNav}) => {
             <Link href="/archives">archives</Link>
             <Link href="/about">about</Link>
             <Link href="/contact">contact</Link>
+            <Link href="/profile">account</Link>
         </div>
     )
 }
